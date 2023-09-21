@@ -1,0 +1,5 @@
+erlang 24.3.4
+elixir 1.13.4-otp-24
+terraform 0.14.11
+terraform-docs 0.14.1
+tflint 0.44.1

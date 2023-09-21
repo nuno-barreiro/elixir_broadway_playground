@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
+    image: localstack/localstack
+    ports:
+      - "127.0.0.1:4566:4566" # LocalStack Gateway
+    environment:
+      - DEBUG=1
+      - SERVICES=sqs
+      - DEFAULT_REGION=us-west-2
+    volumes:
+      - /tmp/localstack:/tmp/localstack
